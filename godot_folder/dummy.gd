@@ -3,10 +3,15 @@ extends Node2D
 const WORLD_SIZE = 1000   # constant: quicker than variable but cannot change value
 
 
-var a = 2
+var a = INF
 var b : float = 3.0
 var c := 3
 var player : KinematicBody2D = null
+
+
+ 
+export(NodePath) var player_camera_path
+onready var player_camera : Camera2D = get_node(player_camera_path)
 
 export var player_velocity : Vector2 = Vector2(1.0, 2.0)
 
